@@ -1618,6 +1618,8 @@ The alternative hypothesis --> that an operation in the years 1960 or 1961 has a
 ### From the Chi-Squared tests we deduce significance in operations in 1960 to 1961
 - This could be due to hospital staff and/or practises in those years 
 
+----
+
 # Conclusion
 
 - Conducting an exploratory data analysis provided many insights into the data, which enabled informed hypothesis proposals

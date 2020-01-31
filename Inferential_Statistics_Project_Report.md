@@ -78,7 +78,7 @@ In summary, the dataset is a great example of an important area of research and 
     memory usage: 9.7 KB
     
 
-A few sample rows
+**A few sample rows**
 
 <div>
 <table border="1" class="dataframe">
@@ -130,7 +130,7 @@ A few sample rows
     dtypes: category(1), int64(3)
     memory usage: 7.7 KB
     
-The sample rows
+**The sample rows again**
 
 <div>
 <table border="1" class="dataframe">
@@ -348,7 +348,7 @@ The sample rows
 </div>
 
 **Survival grouped by those operated on in 1960 and 1961, vs all others**
-- This looks to be a significant grouping as it sees very few non-surviving
+- It seems significant that the relative proportion of survival to non-survival favours survival much more in these two years compared with other years
 
 <div>
 <table border="1" class="dataframe">
@@ -377,7 +377,7 @@ The sample rows
 ----
 
 ### **Examining Survival by Age**
-- There are quite a few more survivors less than or equal to 40 year old
+- There are quite a few more survivors less than or equal to 40 years old
 - Most of the remaining subjects are between 41 and 60
 - Look at values in groupings, the 40 and under group may be statistically significant for survival chances
 
@@ -1271,7 +1271,7 @@ There is very little difference in the distributions of age and year of operatio
 
 **Distributions of values per Survival status**
 
-![png](Images/Inferential_Statistics_Project_Report_83_0.png)
+![png](Images/Inferential_Statistics_Project_Report_83_0.PNG)
 
 
 The pairplots above illustrate relationships between the Survival outcome and the Age, Year, and Nodes values. The surviving subjects are rendered in blue, the non-surviving subjects are in red.
@@ -1342,9 +1342,8 @@ There are quite extreme counts in both groups, but more of them are outliers in 
 
 ## Survivors vs Nodes insights summary
 
-<div>
-<img src="images\perc_groupings_3_and_4.png" width="450"  align="top-left"/>
-</div>
+![png](Images/perc_groupings_3_and_4.PNG")
+
 
 The Nodes count has a very clear difference in distributions between survived and not survived. The majority (79%) of the nodes counts in the survived group are less than 4 (84% <= 4), whereas the not-survived group have greater nodes counts in the higher range of the population. 
 
@@ -1507,15 +1506,14 @@ N         225         81
 - The ranges tested were from 1 to 7
 - The highest Chi-Squared value came with **4 nodes**
 - We evaluated the Chi-Squared value with Cramer's V test - the effects were medium to small, based on the following definitions
-<div>
-<img src="images\Cramers_V_Definitions.PNG" width = 350 align="top-left"/>
-</div>
+
+![png](Images/Cramers_V_Definitions.PNG)
+
     
 
 #### Chi-Squared tests for significance of number of nodes  
-<div>
-<img src="images\four_node_chi_squared.png" width="550"  align="top-left"/>
-</div>
+
+![png](Images/four_node_chi_squared.PNG)
     
 
 #### Chi-Squared scores per Nodes count    
@@ -1550,9 +1548,8 @@ The alternative hypothesis --> that an age less than or equal to 40 has a positi
 **Using alpha level of 0.05 for the tests...**
 
 ### **Test 1: Ages - Two-Sample t-Test Assuming Equal Variances**
-<div>
-<img src="images\t_Test_Ages.PNG" width="550"  align="top-left"/>
-</div>
+
+![png](Images/t_Test_Ages.PNG)
 
 
 **With a t Statistic of `1.187` we do not exceed either of the one or two-tailed t Critical requirements for significance** 
@@ -1561,19 +1558,14 @@ The alternative hypothesis --> that an age less than or equal to 40 has a positi
 ### **Test 2: Chi-Squared test of Age groups**
 - **Degrees of freedom = 4**
    
-<div>    
-<img src="images\Ages_groups_Chi_Squared.PNG" width=650 align="top-left"/>
-</div>
-   
+![png](Images/Ages_groups_Chi_Squared.PNG)
 
 **The Chi-squared value does not exceed Chi-critical**
 - The null hypothesis is proven
 
 ### **Test 3: Chi-squared test of 40 and under age group vs those older**
    
-<div>
-<img src="images\Age_40_Chi_Squared_with_Comment.PNG" width=450 align="top-left"/>
-</div>
+![png](Images/Age_40_Chi_Squared_with_Comment.PNG)
    
 
 ### From the Chi-Squared tests we deduce significance in being <= 40 years of age
@@ -1606,23 +1598,21 @@ The alternative hypothesis --> that an operation in the years 1960 or 1961 has a
 **Using alpha level of 0.05 for the tests...**
 
 ### **Test 1: Years - Two-Sample t-Test Assuming Equal Variances**
-<div> 
-<img src="images\t_Stat_Years.PNG" width=500 align="top-left"/>
-</div>
+
+![png](Images/t_Stat_Years.PNG)
    
 **With a t Statistic of `-0.083` we do not exceed either of the one or two-tailed t Critical requirements for significance** 
 - The null hypothesis is proven
 
 ### **Test 2: Chi-Squared tests against years in various groups**
-<div> 
-<img src="images\Years_Chi_Square_with_Critical.PNG" width=800 align="top-left"/>
-</div>
+
+![png](Images/Years_Chi_Square_with_Critical.PNG)
+
 - Neither of these show significance
     
 ### **Test 3: Chi-squared test of years 1960 and 1961 vs all other years**
-<div> 
-<img src="images\Years_6161_Chi_Squared.PNG" width=500 align="top-left"/>
-</div>
+
+![png](Images/Years_6161_Chi_Squared.PNG)
    
 ### From the Chi-Squared tests we deduce significance in operations in 1960 to 1961
 - This could be due to hospital staff and/or practises in those years 

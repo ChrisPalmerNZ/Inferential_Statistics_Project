@@ -1271,7 +1271,7 @@ There is very little difference in the distributions of age and year of operatio
 
 **Distributions of values per Survival status**
 
-![png](Images/Inferential_Statistics_Project_Report_83_0.PNG)
+![png](Images/Inferential_Statistics_Project_Report_83_0.png)
 
 
 The pairplots above illustrate relationships between the Survival outcome and the Age, Year, and Nodes values. The surviving subjects are rendered in blue, the non-surviving subjects are in red.

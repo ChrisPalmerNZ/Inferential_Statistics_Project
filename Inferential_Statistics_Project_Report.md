@@ -1342,7 +1342,7 @@ There are quite extreme counts in both groups, but more of them are outliers in 
 
 ## Survivors vs Nodes insights summary
 
-![png](Images/perc_groupings_3_and_4.PNG")
+![png](Images/perc_groupings_3_and_4.png)
 
 
 The Nodes count has a very clear difference in distributions between survived and not survived. The majority (79%) of the nodes counts in the survived group are less than 4 (84% <= 4), whereas the not-survived group have greater nodes counts in the higher range of the population. 
@@ -1472,6 +1472,7 @@ However, we will also conduct a range of Chi-Squared tests for various groupings
 **Using alpha level of 0.05 for the tests...**
 
 ### **Test 1: Nodes - Welch t test:**  
+
 ![png](Images/welches_t_test.PNG)
 
 P value and statistical significance:			
@@ -1513,13 +1514,13 @@ N         225         81
 
 #### Chi-Squared tests for significance of number of nodes  
 
-![png](Images/four_node_chi_squared.PNG)
+![png](Images/four_node_chi_squared.png)
     
 
 #### Chi-Squared scores per Nodes count    
-<div>    
-<img src="images\All_Nodes_Chi_Squared.PNG" width=400  align="top-left"/>
-</div>
+    
+![png](Images/All_Nodes_Chi_Squared.PNG)
+
 
 ### On the basis of the Chi-Squared tests we can confirm greatest significance in having <= 4 nodes
 

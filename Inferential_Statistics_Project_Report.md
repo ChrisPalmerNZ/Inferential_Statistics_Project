@@ -546,27 +546,6 @@ The sample rows
 </table>
 </div>
 
-
-
-
-```python
-hab_ages = pd.DataFrame(haberman[["age", "survival"]].copy())
-hab_ages["age_group"] = np.where(hab_ages['age'] <= 40, '<= 40',\
-                        np.where(hab_ages['age'] <= 50, '41 to 50',\
-                        np.where(hab_ages['age'] <= 60, '51 to 60',\
-                        np.where(hab_ages['age'] <= 70, '61 to 70',\
-                                 '> 70'))))
-hab_ages["age_group_40"] = np.where(hab_ages['age'] <= 40, '<= 40',\
-                                 '> 40')
-
-hab_ages["num"] = 1  
-```
-
-
-```python
-hab_ages.groupby('age_group')['survival'].value_counts().unstack().fillna(0).transpose().astype(int)
-```
-
 **Survival by Age group**
 
 <div>
@@ -1398,9 +1377,7 @@ The line that approaches the y-axis just under 0.6 illustrates the non-surviving
 
 The differences between the distributions are easily discernable, in contrast to the equivalent comparisons for Age and year, produced below...
 
-<div>
-<img src="images\CDF_Age_Year.png" width="1000"  align="top-left"/>
-</div>
+![png](Images/CDF_Age_Year.png)
 
 The CDF plot for Age shows that the Survived group starts before the Non-Surviving group, and that there is a divergence between them around the mid to late 40s, but apart from that they are very similar.  
 
@@ -1470,15 +1447,11 @@ However, we will also conduct a range of Chi-Squared tests for various groupings
 
 ## Descriptive Statistics
 
-<div>
-<img src="images\stats_all.png" width="900"  align="top-left"/>
-</div>
-<div>
-<img src="images\stats_survivors.png" width="900"  align="top-left"/>
-</div>
-<div>
-<img src="images\stats_non_survivors.png" width="900"  align="top-left"/>
-</div>
+![png](Images/stats_all.PNG)
+<br/>
+![png](Images/stats_survivors.PNG)
+<br/>
+![png](Images/stats_non_survivors.PNG)
 
 
 ----
@@ -1500,10 +1473,7 @@ However, we will also conduct a range of Chi-Squared tests for various groupings
 **Using alpha level of 0.05 for the tests...**
 
 ### **Test 1: Nodes - Welch t test:**  
-<div>
-<img src="images\welches_t_test.png" width="550"  align="top-left"/>
-</div>
-
+![png](Images/welches_t_test.PNG)
 
 P value and statistical significance:			
 The two-tailed P value is less than 0.0001			

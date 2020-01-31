@@ -1522,7 +1522,7 @@ N         225         81
 ![png](Images/All_Nodes_Chi_Squared.PNG)
 
 
-### On the basis of the Chi-Squared tests we can confirm greatest significance in having <= 4 nodes
+### Based on the Chi-Squared tests we affirm the greatest significance in having <= 4 nodes
 
 ----
 

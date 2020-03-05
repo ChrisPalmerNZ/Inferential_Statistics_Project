@@ -52,7 +52,7 @@ The dataset contains cases from a study that was conducted between 1958 and 1970
 
 The Haberman's Survival Data has been extensively studied, as it provides an example of medical data that can provide insight into patient survival after a medical intervention. It covers outcomes of patients who have had breast surgery over a 12 year period at the University of Chicago's Billings Hospital, and as such it is an sample of the general population of patients undergoing breast surgery.  
 
-It is also a very small dataset (only 306 cases), with only a few features (age, year of operation and number of axillary nodes), which are classified based on the patient's surival or not five years after the surgery. As it contains the actual outcomes it is naturally imbalanced - there are thankfully far more patients who survived, but this imbalance is something that must be accounted for in the data and statistical analysis, and especially beyond that - when predictive models are develpoed to work with it.
+It is also a very small dataset (only 306 cases), with only a few features (age, year of operation and number of axillary nodes), which are classified based on the patient's surival or not five years after the surgery. As it contains the actual outcomes it is naturally imbalanced - there are thankfully far more patients who survived, but this imbalance is something that must be accounted for in the data and statistical analysis, and especially beyond that - when predictive models are developed to work with it.
 
 In summary, the dataset is a great example of an important area of research and also provides useful challenges in its analysis, and so continues to be studied. I picked it because I am interested in medical research, it was only as I explored it that I understood its value.
 
@@ -208,7 +208,6 @@ In summary, the dataset is a great example of an important area of research and 
         - The intuition is that they relate to clinical practices (e.g. oncology team, surgeon), 
         - therefore - they will not reflect any general property of people having breast cancer surgery
         - and so would be useful for assessment of past hospital practices only...   
-- Export groupings to Excel for $\tilde{\chi}^2$ (Chi Squared) analysis         
 
 #### An interesting historical insight into the hospital
 
@@ -377,7 +376,7 @@ In summary, the dataset is a great example of an important area of research and 
 ----
 
 ### **Examining Survival by Age**
-- There are quite a few more survivors less than or equal to 40 years old
+- There are quite a few more survivors compared with non-survivors less than or equal to 40 years old
 - Most of the remaining subjects are between 41 and 60
 - Look at values in groupings, the 40 and under group may be statistically significant for survival chances
 
@@ -791,14 +790,14 @@ In summary, the dataset is a great example of an important area of research and 
 
 
 ### **Survivor counts per groups of nodes**
-- There are a some with no nodes at all, where there are fairly large numbers on non-survivors
+- There are a some with no nodes at all, even here there are fairly large numbers of non-survivors
 - Therefore examine in particular the following groups
     - Three or less vs all others
     - Four or less vs all others
     - Between 1 and 3 vs all greater than 3
-    - Between 1 and 4 vs all greater than 4
-- Export groupings to Excel for $\tilde{\chi}^2$ (Chi Squared) analysis     
-- See Appendix entry "Examining Nodes groupings" for examination of all nodes groupings...    
+    - Between 1 and 4 vs all greater than 4    
+- See Appendix entry "Examining Nodes groupings" for tables of other nodes analyses...
+    
 
 **Grouped by 3**
 
@@ -1152,7 +1151,7 @@ Look at the data with the zero nodes subjects as a separate group, and when excl
 
 
 ### Survivor counts per groups of nodes - summary
-If those having no nodes are excluded, and the remaining are grouped around the threshold of having either 3 or 4 nodes or less, then there is a clear pattern of survival vs non-survival. The pattern is clearest at the 4 node threshold - those having between 1 and 4 nodes vs having greater than 4 nodes - the within-group percentages are almost exactly reversed. The zero nodes group may be best be treated separately, but we will be not be excluding them from the statistical analysis.
+If those having no nodes are excluded, and the remaining are grouped around the threshold of having either 3 or 4 nodes or less, then there is a clear pattern of survival vs non-survival. The pattern is clearest at the 4 node threshold - those having between 1 and 4 nodes vs having greater than 4 nodes - the within-group percentages are almost exactly reversed. The zero-nodes group may be best be treated separately, but we will be not be excluding them from the statistical analysis.
 
 ----
 
@@ -1349,11 +1348,9 @@ The Nodes count has a very clear difference in distributions between survived an
 
 The relationship between nodes counts and survival is explored in terms of node count distributions and kernel density esitmates (KDE) charts above. The KDE estimates the probability density function of a continuous random variable, here it shows that it is roughly twice as probable for non-surviving subjects to have 3 or more nodes compared to the surviving group - that is, from around 3 on the nodes x-axis the line for non-survival has roughly twice the amplitude of the surviving group on the y-axis.
 
-The final chart removes the outliers so that the core relationships can be viewed more clearly.
-
 ## CDF (Cumulative Distributed Function) - another insight
 
-The cumulative distribution function (cdf) is the probability that the variable having a value less than or equal to x. 
+The cumulative distribution function (CDF) is the probability that the variable having a value less than or equal to x. 
 
    
 **CDF plots of proportions of counts per features**
@@ -1388,7 +1385,7 @@ The CDF plot for Year show divergence between 1960 and 1961, and again around 19
 
 The following 2 plots illustrate the closer relationships of the Age and Year values per suvival groupings, and that they seem unlikely to contribute significantly to the survival outcome.
 
-The Age box illustrates that the first percentile of the surviving group is lower than the non-surviving group, and the third percentile of the non-surviving group is a little higher, but there is little difference between the two.   
+The Age box plot illustrates that the first percentile of the surviving group is lower than the non-surviving group, and the third percentile of the non-surviving group is a little higher, but there is little difference between the two.   
 
 The violin plot shows more clearly that the non-surviving group is more densly distributed around the age of 50 compared to the surviving group. 
 
@@ -1456,7 +1453,7 @@ However, we will also conduct a range of Chi-Squared tests for various groupings
 ----
 
 ## **Axillary Nodes vs Survival**
-### Inferential Statistics
+### **Inferential Statistics**
     
 **Hypotheis**: Having axillary nodes is a statistically significant indicator of decreased survival chances    
 - The null hypothesis --> That the number of nodes has no effect on survival outcome.
@@ -1527,7 +1524,7 @@ N         225         81
 ----
 
 ## **Age vs Survival**
-### Inferential Statistics
+### **Inferential Statistics**
     
 **Hypotheis**: Age grouping by less than or equal to 40 vs. over 40 has a statistically significant effect.
   
@@ -1576,7 +1573,7 @@ The alternative hypothesis --> that an age less than or equal to 40 has a positi
 ----
 
 ## **Year vs Survival**
-### Inferential Statistics
+### **Inferential Statistics**
     
 Having an **operation in the years 1960 and 1961** has a statistically significant effect.
  - This could be of interest if we need to consider changes in the treatments around this potentially significant period  

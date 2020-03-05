@@ -1505,7 +1505,7 @@ N         225         81
 - The highest Chi-Squared value came with **4 nodes**
 - We evaluated the Chi-Squared value with Cramer's V test - the effects were medium to small, based on the following definitions
 
-![png](Images/Cramers_V_Definitions_small.PNG)
+![png](Images/Cramers_V_Definitions_small.png)
 
     
 
